@@ -187,7 +187,7 @@ tar_value = {
  'red_sore_around_nose': 0,
  'yellow_crust_ooze': 0}
 
-input_value = st.selectbox('Enter the symtoms : ', sym['Symptoms'].unique())
+input_value = st.selectbox('Enter the symptoms : ', sym['Symptoms'].unique())
 
 if st.button('Predict'):
     input_value = input_value.split(',')
