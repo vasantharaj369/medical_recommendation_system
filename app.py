@@ -6,6 +6,7 @@ pre = pickle.load(open('pre.pkl', 'rb'))
 med = pickle.load(open('med.pkl', 'rb'))
 diet = pickle.load(open('diet.pkl', 'rb'))
 des = pickle.load(open('des.pkl', 'rb'))
+sym = pickle.load(open('sym.pkl', 'rb'))
 st.header('Medical Recommendation System')
 
 
@@ -186,7 +187,7 @@ tar_value = {
  'red_sore_around_nose': 0,
  'yellow_crust_ooze': 0}
 
-input_value = st.text_input('Enter the symptoms')
+input_value = st.selectbox('Enter the symtoms : ', sym['Symptoms'].unique())
 
 if st.button('Predict'):
     input_value = input_value.split(',')
